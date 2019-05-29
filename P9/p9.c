@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int FIFO(char s[], char F[], int f, int l){
-    int i,j,k,flag=0,cnt=0;
+    int i,j=0,k,flag=0,cnt=0;
     printf("\n\tPAGE\t\tFRAMES\t\tFAULTS");
     for(i=0;i<l;i++){
         for(k=0;k<f;k++){
@@ -98,8 +98,8 @@ int main(){
             for(i=0;i<f;i++){F[i]=-1;}
         }
         switch(ch){
-            case 1: FIFO(s,F,f,l);break;
-            case 2: lru(s,F,f,l);break;
+            case 1: for(i=0;i<f;i++){F[i]=' ';}FIFO(s,F,f,l);break;
+            case 2: for(i=0;i<f;i++){F[i]=-1;}lru(s,F,f,l);break;
             default:printf("\n");exit(0);
         }
         printf("\n\nPress 1 to continue ....0 to exit : ");
