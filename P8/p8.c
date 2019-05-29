@@ -5,7 +5,7 @@ struct process
 }p[10];
 int avail[6],sseq[10],ss=0,check1=0,check2=0,n,work[6],nor,safeseq(void);
 int main(){
-    int ch,i=0,j=0,k,pid,ch1;
+    int ch,i=0,j=0,k;
     do{
         printf("\n----------------------------------------------------------");
         printf("\n1. Input");
