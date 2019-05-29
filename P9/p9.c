@@ -95,10 +95,11 @@ int main(){
             scanf("%d",&l);
             printf("\nEnter string : ");
             scanf("%s",s);
+            for(i=0;i<f;i++){F[i]=-1;}
         }
         switch(ch){
-            case 1: for(i=0;i<f;i++){F[i]=-1;}FIFO(s,F,f,l);break;
-            case 2: for(i=0;i<f;i++){F[i]=-1;}lru(s,F,f,l);break;
+            case 1: FIFO(s,F,f,l);break;
+            case 2: lru(s,F,f,l);break;
             default:printf("\n");exit(0);
         }
         printf("\n\nPress 1 to continue ....0 to exit : ");
